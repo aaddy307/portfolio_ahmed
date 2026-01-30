@@ -8,7 +8,7 @@ export default function Skills() {
     {
       title: 'Databases',
       icon: 'fa-database',
-      skills: ['MongoDB', 'MySQL', 'Database Design', 'API Integration']
+      skills: ['MongoDB', 'MySQL', 'API Integration']
     },
     {
       title: 'UI/UX Design',
@@ -16,19 +16,14 @@ export default function Skills() {
       skills: ['Figma', 'WordPress', 'Responsive Design', 'User Research', 'Prototyping']
     },
     {
-      title: 'AI & ML',
-      icon: 'fa-brain',
-      skills: ['Python', 'Deep Learning', 'Machine Learning']
-    },
-    {
       title: 'Video Editing',
       icon: 'fa-video',
-      skills: ['Video Production', 'Motion Graphics', 'Creative Editing']
+      skills: ['Video Production', 'Creative Editing']
     },
     {
       title: 'Tools & More',
       icon: 'fa-tools',
-      skills: ['Git & GitHub', 'VS Code', 'RESTful APIs', 'Responsive Design']
+      skills: ['Git & GitHub', 'VS Code', 'Responsive Design']
     }
   ];
 
