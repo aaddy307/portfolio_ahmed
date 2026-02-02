@@ -1,0 +1,281 @@
+"use client";
+
+import { useState } from "react";
+import ProjectModal from "./ProjectModal";
+import Image from "next/image";
+
+export default function Projects() {
+  const [filter, setFilter] = useState("all");
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  const filters = [
+    { id: "all", label: "All Projects" },
+    { id: "web", label: "Web Development" },
+    { id: "design", label: "UI/UX Design" },
+  ];
+
+  const projects = [
+    {
+      id: "project1",
+      category: "web",
+      image: "/airbnb.png",
+      color: "accent-primary",
+      tag: "Web Development",
+      tagColor: "orange",
+      title: "Airbnb Clone",
+      description:
+        "Fully coded Airbnb website clone using React, Node.js, and MongoDB with responsive UI and real functionality.",
+      fullDescription:
+        "A complete Airbnb clone built from scratch, implementing user authentication, property listing, booking system, and payment integration. The project demonstrates full-stack web development skills, responsive design, and real-time database management.",
+      technologies: [
+        "React.js",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Stripe API",
+        "Tailwind CSS",
+      ],
+      features: [
+        "User authentication and authorization",
+        "Property listing and search functionality",
+        "Booking and reservation system",
+        "Secure payment integration with Stripe",
+        "Responsive and mobile-friendly design",
+        "Admin dashboard for managing listings",
+      ],
+      github: "#",
+    },
+
+    {
+      id: "project2",
+      category: "design",
+      image: "/zepto.png",
+      color: "purple",
+      tag: "UI/UX Design",
+      tagColor: "purple",
+      title: "Zepto App Clone",
+      description:
+        "Visual redesign and clone of the Zepto app in Figma, recreating the user interface and app flow.",
+      fullDescription:
+        "A complete Figma-based clone of the Zepto app, focusing on replicating the original app's user interface, interactions, and navigation flow. The project emphasizes attention to detail, consistency, and UI best practices.",
+      technologies: ["Figma", "Wireframing", "Prototyping"],
+      features: [
+        "High-fidelity UI recreation",
+        "Interactive prototype for app flow",
+        "Consistent design patterns and components",
+        "Focus on user-friendly navigation",
+        "Attention to detail in spacing, typography, and colors",
+      ],
+      figma:
+        "https://www.figma.com/design/ajScJ6wNgIIdRfuzq7E0sN/aaddy?node-id=438-73&t=qZX7nwjpWoU5NARD-1",
+    },
+    {
+      id: "project3",
+      category: "design",
+      image: "/netflix1.svg",
+      color: "purple",
+      tag: "UI/UX Design & Web Development",
+      tagColor: "purple",
+      title: "Netflix clone",
+      description:
+        "Netflix-inspired platform designed in Figma and developed as a responsive web application with modern UI and smooth user experience.",
+      fullDescription:
+        "A complete Netflix clone project designed in Figma and developed as a responsive web application. The project includes detailed UI/UX design, user flow planning, and a functional website that replicates the Netflix look and feel. It focuses on modern layouts, smooth interactions, and an engaging streaming-style user experience.",
+      technologies: [
+        "Figma",
+        "React.js",
+        "JavaScript",
+        "Tailwind CSS",
+        "Responsive Design",
+        "UI/UX Principles",
+      ],
+
+      features: [
+        "High-fidelity UI design in Figma",
+        "Responsive web implementation",
+        "Netflix-style layout and navigation",
+        "Clean and modern UI components",
+        "User-focused design and smooth interactions",
+        "Mobile and desktop optimized design",
+      ],
+      figma:
+        "https://www.figma.com/design/ajScJ6wNgIIdRfuzq7E0sN/aaddy?node-id=0-1&t=qZX7nwjpWoU5NARD-1",
+      github: "#",
+    },
+    {
+      id: "project4",
+      category: "design",
+      image: "/travel.png",
+      color: "blue",
+      tag: "UI/UX Design",
+      tagColor: "blue",
+      title: "Travel Website Design",
+      description:
+        "A visually appealing travel website design created entirely in Figma, focusing on intuitive navigation and user experience.",
+      fullDescription:
+        "A complete Figma-based travel website design, emphasizing modern aesthetics, easy-to-use navigation, and engaging user interactions. The design includes destination pages, booking interface, and responsive layouts suitable for both desktop and mobile.",
+      technologies: ["Figma", "Wireframing", "Prototyping", "UI Design"],
+      features: [
+        "High-fidelity UI screens for a travel website",
+        "Interactive prototype showcasing user flow",
+        "Responsive design for desktop and mobile",
+        "Clean and modern visual aesthetics",
+        "Consistent design system and components",
+        "Focus on user-friendly booking and exploration experience",
+      ],
+    },
+    {
+      id: "project5",
+      category: "design",
+      image: "/Snapdeal.svg",
+      color: "red",
+      tag: "UI/UX Design",
+      tagColor: "red",
+      title: "Snapdeal Website Clone",
+      description:
+        "A complete Snapdeal website interface recreated in Figma, focusing on layout, navigation, and shopping experience.",
+      fullDescription:
+        "This project is a Figma-based clone of the Snapdeal website, replicating its homepage, product listing, and category navigation. The design emphasizes clean layouts, intuitive navigation, and interactive elements to showcase a realistic web shopping experience.",
+      technologies: ["Figma", "Wireframing", "Prototyping", "UI Design"],
+      features: [
+        "High-fidelity recreation of Snapdeal website pages",
+        "Interactive prototype to demonstrate user flow",
+        "Consistent visual components and spacing",
+        "Focus on user-friendly browsing and shopping experience",
+        "Responsive web design considerations",
+        "Attention to typography, colors, and layout",
+      ],
+      figma:
+        "https://www.figma.com/design/ajScJ6wNgIIdRfuzq7E0sN/aaddy?node-id=1197-103&t=Hx5ZK3AXxXdMbnJI-1",
+    },
+  ];
+
+  const filteredProjects =
+    filter === "all"
+      ? projects
+      : projects.filter((project) => project.category === filter);
+
+  return (
+    <>
+      <section id="projects" className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 reveal">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12 sm:mb-14 lg:mb-16">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mb-4 gradient-text">
+              My Work
+            </h2>
+            <div className="section-divider"></div>
+            <p className="text-base sm:text-lg lg:text-xl text-text-secondary">
+              Showcasing my latest projects and creations
+            </p>
+          </div>
+
+          {/* Filter Buttons - Responsive */}
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-3 lg:gap-4 mb-10 sm:mb-12">
+            {filters.map((filterItem) => (
+              <button
+                key={filterItem.id}
+                className={`filter-btn text-sm sm:text-base ${filter === filterItem.id ? "active" : ""}`}
+                onClick={() => setFilter(filterItem.id)}
+              >
+                {filterItem.label}
+              </button>
+            ))}
+          </div>
+
+          {/* Projects Grid - Responsive columns */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+            {filteredProjects.map((project, index) => (
+              <div
+                key={`${project.id}-${index}`}
+                className="glass-card rounded-xl sm:rounded-2xl overflow-hidden hover-lift"
+                style={{
+                  opacity: 1,
+                  transform: "scale(1) translateY(0)",
+                  transition: "all 0.3s ease",
+                }}
+              >
+                {/* Project Image - Responsive height */}
+                <div className="project-image">
+                  <div className="relative h-48 sm:h-52 lg:h-56 rounded-t-xl sm:rounded-t-2xl overflow-hidden group">
+                    {project.image && (
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        fill
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        className="object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
+                    )}
+
+                    {/* Gradient overlay */}
+                    <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent"></div>
+                  </div>
+                </div>
+
+                {/* Project Content - Responsive padding */}
+                <div className="p-4 sm:p-5 lg:p-6">
+                  <div className="flex items-center gap-2 mb-2 sm:mb-3">
+                    <span
+                      className={`px-2.5 sm:px-3 py-1 text-xs rounded-full bg-${project.tagColor}-500/20 text-${project.tagColor}-500`}
+                    >
+                      {project.tag}
+                    </span>
+                  </div>
+                  
+                  <h3 className="text-lg sm:text-xl font-display font-bold mb-2 line-clamp-2">
+                    {project.title}
+                  </h3>
+                  
+                  <p className="text-text-secondary text-xs sm:text-sm mb-4 line-clamp-3">
+                    {project.description}
+                  </p>
+                  
+                  <div className="flex gap-3">
+                    <button
+                      className="btn-primary text-xs sm:text-sm py-2 px-3 sm:px-4 flex-1 sm:flex-none"
+                      onClick={() => setSelectedProject(project)}
+                    >
+                      <i className="fas fa-eye mr-2"></i>
+                      <span className="hidden sm:inline">View Details</span>
+                      <span className="sm:hidden">Details</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+
+            {/* Add Project Button - Responsive */}
+            {/* <div
+              className="glass-card rounded-xl sm:rounded-2xl overflow-hidden hover-lift border-2 border-dashed border-orange-500/30 flex items-center justify-center min-h-[300px] sm:min-h-[350px] lg:min-h-[400px] cursor-pointer group"
+              onClick={() =>
+                alert(
+                  "To add a new project, edit the Projects.jsx component and add your project to the projects array!"
+                )
+              }
+            >
+              <div className="text-center p-4 sm:p-6">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-accent-primary/10 flex items-center justify-center mx-auto mb-3 sm:mb-4 group-hover:bg-accent-primary/20 transition-all group-hover:rotate-90 duration-500">
+                  <i className="fas fa-plus text-3xl sm:text-4xl text-accent-primary"></i>
+                </div>
+                <h3 className="text-xl sm:text-2xl font-display font-bold mb-2 gradient-text">
+                  Add New Project
+                </h3>
+                <p className="text-text-secondary text-sm sm:text-base">
+                  Click to learn how to add your projects
+                </p>
+              </div>
+            </div> */}
+          </div>
+        </div>
+      </section>
+
+      {/* Project Modal */}
+      {selectedProject && (
+        <ProjectModal
+          project={selectedProject}
+          onClose={() => setSelectedProject(null)}
+        />
+      )}
+    </>
+  );
+}
