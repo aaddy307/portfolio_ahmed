@@ -140,64 +140,62 @@ export default function About() {
   return (
     <section
       id="about"
-      className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 reveal"
+      className="py-16 sm:py-0 lg:py-24 px-4 sm:px-6 lg:px-8 reveal"
     >
       <div className="max-w-7xl mx-auto">
-        {/* Section Header */}
-        <div className="text-center mb-8 sm:mb-10 lg:mb-12">
+        <div className="text-center mb-12 sm:mb-14 lg:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mb-4 gradient-text">
             About Me
           </h2>
           <div className="section-divider"></div>
         </div>
 
-        {/* Main Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-10">
-          {/* Profile Card - Full width on mobile, 1 column on desktop */}
-          <div className="lg:col-span-1 order-1">
-            <div className="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-5 lg:p-6 hover-lift h-full flex flex-col items-center justify-center">
+        <div className="grid lg:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12">
+          {/* Profile Card - Left Column */}
+          <div className="lg:col-span-1">
+            <div className="glass-card rounded-xl sm:rounded-2xl p-6 sm:p-8 hover-lift h-full flex flex-col justify-center">
               {/* Profile Image */}
-              <div className="relative w-24 h-24 sm:w-32 sm:h-32 lg:w-36 lg:h-36 mx-auto mb-3 sm:mb-4 shrink-0 rounded-full overflow-hidden bg-gradient-to-br from-accent-primary to-accent-secondary flex items-center justify-center shadow-lg hover:scale-105 transition-transform duration-500 cursor-pointer">
+              <div className="relative w-40 h-40 sm:w-48 sm:h-48 mx-auto mb-6 shrink-0 rounded-full overflow-hidden bg-gradient-to-br from-accent-primary to-accent-secondary flex items-center justify-center shadow-lg hover:scale-105 transition-transform duration-500 cursor-pointer">
                 <Image
                   src="/profile.jpeg"
                   alt="Profile Picture"
                   fill
                   priority
-                  sizes="(max-width: 640px) 96px, (max-width: 1024px) 128px, 144px"
+                  sizes="(max-width: 640px) 160px, 192px"
                   className="object-cover"
                 />
               </div>
 
               {/* Name & Title */}
-              <div className="text-center mb-3 sm:mb-4">
-                <h3 className="text-lg sm:text-xl lg:text-2xl font-display font-bold mb-1 gradient-text">
+              <div className="text-center mb-6">
+                <h3 className="text-2xl sm:text-3xl font-display font-bold mb-2 gradient-text">
                   Ahmed Khan
                 </h3>
-                <p className="text-text-secondary text-[10px] sm:text-xs lg:text-sm">
+                <p className="text-text-secondary text-sm sm:text-base">
                   Full-Stack Developer & AI Enthusiast
                 </p>
               </div>
 
               {/* Location */}
-              <div className="flex items-center justify-center gap-1 sm:gap-2 mb-3 sm:mb-4 text-text-secondary">
-                <i className="fas fa-map-marker-alt text-orange-500 text-xs sm:text-sm"></i>
-                <span className="text-[10px] sm:text-xs lg:text-sm">Mumbai, India</span>
+              <div className="flex items-center justify-center gap-2 mb-6 text-text-secondary">
+                <i className="fas fa-map-marker-alt text-orange-500"></i>
+                <span className="text-sm sm:text-base">Mumbai, India</span>
               </div>
 
               {/* Stats Grid */}
-              <div className="grid grid-cols-3 gap-1.5 sm:gap-2 lg:gap-3 w-full max-w-xs">
+              <div className="grid grid-cols-3 gap-3 sm:gap-4">
                 {stats.map((stat, index) => (
                   <div
                     key={index}
-                    className="text-center p-1.5 sm:p-2 lg:p-3 rounded-md sm:rounded-lg bg-white/5 border border-white/10 hover:border-accent-primary/50 transition-all"
+                    className="text-center p-3 sm:p-4 rounded-lg bg-white/5 border border-white/10 hover:border-accent-primary/50 transition-all"
                   >
-                    <div className={`w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 mx-auto mb-1 rounded-md sm:rounded-lg bg-gradient-to-br ${stat.gradient} flex items-center justify-center shadow-lg ${stat.shadowColor}`}>
-                      <i className={`fas ${stat.icon} text-white text-[10px] sm:text-xs lg:text-sm`}></i>
+                    <div className={`w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-2 rounded-lg bg-gradient-to-br ${stat.gradient} flex items-center justify-center shadow-lg ${stat.shadowColor}`}>
+                      <i className={`fas ${stat.icon} text-white text-sm sm:text-base`}></i>
                     </div>
-                    <p className="text-sm sm:text-base lg:text-lg font-bold text-accent-primary mb-0.5">
+                    <p className="text-xl sm:text-2xl font-bold text-accent-primary mb-1">
                       {stat.number}
                     </p>
-                    <p className="text-[8px] sm:text-[10px] lg:text-xs text-text-secondary leading-tight">
+                    <p className="text-xs text-text-secondary leading-tight">
                       {stat.label}
                     </p>
                   </div>
@@ -206,142 +204,141 @@ export default function About() {
             </div>
           </div>
 
-          {/* Bio Section - Full width on mobile, 2 columns on desktop */}
-          <div className="lg:col-span-2 order-2">
-            <div className="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-5 lg:p-6 hover-lift h-full">
-              <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
-                <div className="w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10 rounded-lg bg-gradient-to-br from-orange-500 to-pink-500 flex items-center justify-center shadow-lg shadow-orange-500/50 shrink-0">
-                  <i className="fas fa-user text-white text-xs sm:text-sm lg:text-base"></i>
+          {/* Content - Right Columns */}
+          <div className="lg:col-span-2 space-y-6 sm:space-y-8">
+            {/* Bio Section */}
+            <div className="glass-card rounded-xl sm:rounded-2xl p-6 sm:p-8 hover-lift">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-orange-500 to-pink-500 flex items-center justify-center shadow-lg shadow-orange-500/50">
+                  <i className="fas fa-user text-white"></i>
                 </div>
-                <h3 className="text-base sm:text-lg lg:text-xl font-display font-bold">
+                <h3 className="text-xl sm:text-2xl font-display font-bold">
                   Who I Am
                 </h3>
               </div>
-              <ul className="space-y-2 sm:space-y-2.5">
-                <li className="flex items-start gap-2 text-[10px] sm:text-xs lg:text-sm text-text-secondary leading-relaxed">
-                  <i className="fas fa-check-circle text-accent-primary mt-0.5 shrink-0 text-[10px] sm:text-xs"></i>
+              <ul className="space-y-3 sm:space-y-4">
+                <li className="flex items-start gap-3 text-sm sm:text-base text-text-secondary leading-relaxed">
+                  <i className="fas fa-check-circle text-accent-primary mt-1 shrink-0"></i>
                   <span>
                     Passionate first-year <span className="text-accent-primary font-semibold">B.Voc AI & ML student</span> at Nexcore Institute of Technology
                   </span>
                 </li>
-                <li className="flex items-start gap-2 text-[10px] sm:text-xs lg:text-sm text-text-secondary leading-relaxed">
-                  <i className="fas fa-check-circle text-accent-primary mt-0.5 shrink-0 text-[10px] sm:text-xs"></i>
+                <li className="flex items-start gap-3 text-sm sm:text-base text-text-secondary leading-relaxed">
+                  <i className="fas fa-check-circle text-accent-primary mt-1 shrink-0"></i>
                   <span>
                     Strong foundation in <span className="text-accent-primary font-semibold">full-stack web development</span> with modern technologies
                   </span>
                 </li>
-                <li className="flex items-start gap-2 text-[10px] sm:text-xs lg:text-sm text-text-secondary leading-relaxed">
-                  <i className="fas fa-check-circle text-accent-primary mt-0.5 shrink-0 text-[10px] sm:text-xs"></i>
+                <li className="flex items-start gap-3 text-sm sm:text-base text-text-secondary leading-relaxed">
+                  <i className="fas fa-check-circle text-accent-primary mt-1 shrink-0"></i>
                   <span>
                     <span className="text-accent-primary font-semibold">Ex-student of Universal AI University, Karjat</span> with deep appreciation for artificial intelligence
                   </span>
                 </li>
-                <li className="flex items-start gap-2 text-[10px] sm:text-xs lg:text-sm text-text-secondary leading-relaxed">
-                  <i className="fas fa-check-circle text-accent-primary mt-0.5 shrink-0 text-[10px] sm:text-xs"></i>
+                <li className="flex items-start gap-3 text-sm sm:text-base text-text-secondary leading-relaxed">
+                  <i className="fas fa-check-circle text-accent-primary mt-1 shrink-0"></i>
                   <span>
                     Actively seeking <span className="text-accent-primary font-semibold">internships, projects, and collaborations</span> to contribute skills and grow as a developer
                   </span>
                 </li>
               </ul>
             </div>
-          </div>
-        </div>
 
-        {/* Journey Timeline - Full width */}
-        <div className="mb-8 sm:mb-10">
-          <div className="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-5 lg:p-6 hover-lift">
-            <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-5">
-              <div className="w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10 rounded-lg bg-gradient-to-br from-green-500 to-teal-500 flex items-center justify-center shadow-lg shadow-green-500/50 shrink-0">
-                <i className="fas fa-route text-white text-xs sm:text-sm lg:text-base"></i>
-              </div>
-              <h3 className="text-base sm:text-lg lg:text-xl font-display font-bold">
-                My Journey
-              </h3>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
-              {journey.map((item, index) => (
-                <div
-                  key={index}
-                  className="flex items-center gap-2 sm:gap-3 p-2.5 sm:p-3 lg:p-4 rounded-lg bg-white/5 border border-white/10 hover:border-accent-primary/50 transition-all group"
-                >
-                  <div className={`w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10 rounded-lg bg-gradient-to-br from-${item.color}-500 to-${item.color}-600 flex items-center justify-center shadow-lg shadow-${item.color}-500/50 group-hover:scale-110 transition-transform shrink-0`}>
-                    <i className={`fas ${item.icon} text-white text-xs sm:text-sm lg:text-base`}></i>
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <h4 className="font-semibold text-[10px] sm:text-xs lg:text-sm mb-0.5 truncate">
-                      {item.title}
-                    </h4>
-                    <p className="text-[9px] sm:text-[10px] lg:text-xs text-text-secondary mb-0.5 truncate">
-                      {item.subtitle}
-                    </p>
-                    {item.period && (
-                      <p className="text-[8px] sm:text-[9px] lg:text-[10px] text-text-secondary/70 flex items-center gap-1">
-                        <i className="far fa-calendar-alt text-[7px] sm:text-[8px]"></i>
-                        {item.period}
-                      </p>
-                    )}
-                  </div>
-                  <span className={`px-1.5 sm:px-2 lg:px-3 py-0.5 sm:py-1 rounded-full text-[8px] sm:text-[9px] lg:text-xs font-semibold bg-${item.color}-500/20 text-${item.color}-500 border border-${item.color}-500/30 shrink-0`}>
-                    {item.status}
-                  </span>
+            {/* Journey Timeline */}
+            <div className="glass-card rounded-xl sm:rounded-2xl p-6 sm:p-8 hover-lift">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-green-500 to-teal-500 flex items-center justify-center shadow-lg shadow-green-500/50">
+                  <i className="fas fa-route text-white"></i>
                 </div>
-              ))}
+                <h3 className="text-xl sm:text-2xl font-display font-bold">
+                  My Journey
+                </h3>
+              </div>
+              <div className="space-y-4">
+                {journey.map((item, index) => (
+                  <div
+                    key={index}
+                    className="flex items-center gap-4 p-4 rounded-lg bg-white/5 border border-white/10 hover:border-accent-primary/50 transition-all group"
+                  >
+                    <div className={`w-12 h-12 rounded-lg bg-gradient-to-br from-${item.color}-500 to-${item.color}-600 flex items-center justify-center shadow-lg shadow-${item.color}-500/50 group-hover:scale-110 transition-transform shrink-0`}>
+                      <i className={`fas ${item.icon} text-white text-lg`}></i>
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h4 className="font-semibold text-sm sm:text-base mb-1">
+                        {item.title}
+                      </h4>
+                      <p className="text-xs sm:text-sm text-text-secondary mb-1">
+                        {item.subtitle}
+                      </p>
+                      {item.period && (
+                        <p className="text-xs text-text-secondary/70 flex items-center gap-1">
+                          <i className="far fa-calendar-alt text-[10px]"></i>
+                          {item.period}
+                        </p>
+                      )}
+                    </div>
+                    <span className={`px-3 py-1 rounded-full text-xs font-semibold bg-${item.color}-500/20 text-${item.color}-500 border border-${item.color}-500/30 shrink-0`}>
+                      {item.status}
+                    </span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Expertise Section - Full width */}
-        <div className="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-5 lg:p-6 hover-lift">
-          <div className="flex items-center gap-2 sm:gap-3 mb-5 sm:mb-6">
-            <div className="w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10 rounded-lg bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center shadow-lg shadow-purple-500/50 shrink-0">
-              <i className="fas fa-star text-white text-xs sm:text-sm lg:text-base"></i>
+        {/* Expertise Grid - Full Width Below */}
+        <div className="glass-card rounded-xl sm:rounded-2xl p-6 sm:p-8 hover-lift">
+          <div className="flex items-center gap-3 mb-8">
+            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center shadow-lg shadow-purple-500/50">
+              <i className="fas fa-star text-white"></i>
             </div>
-            <h3 className="text-base sm:text-lg lg:text-xl font-display font-bold">
+            <h3 className="text-xl sm:text-2xl font-display font-bold">
               My Expertise
             </h3>
           </div>
 
           {/* Categories */}
-          <div className="space-y-5 sm:space-y-6">
+          <div className="space-y-8">
             {expertiseCategories.map((categoryData, catIndex) => (
               <div key={catIndex}>
                 {/* Category Header */}
-                <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
-                  <div className={`w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 rounded-md sm:rounded-lg bg-gradient-to-br ${categoryData.gradient} flex items-center justify-center shadow-lg shrink-0`}>
-                    <i className={`fas ${categoryData.icon} text-white text-[10px] sm:text-xs lg:text-sm`}></i>
+                <div className="flex items-center gap-3 mb-4">
+                  <div className={`w-8 h-8 rounded-lg bg-gradient-to-br ${categoryData.gradient} flex items-center justify-center shadow-lg`}>
+                    <i className={`fas ${categoryData.icon} text-white text-sm`}></i>
                   </div>
-                  <h4 className="text-sm sm:text-base lg:text-lg font-display font-bold text-text-primary">
+                  <h4 className="text-lg sm:text-xl font-display font-bold text-text-primary">
                     {categoryData.category}
                   </h4>
                 </div>
 
                 {/* Skills Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-3">
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                   {categoryData.skills.map((skill, skillIndex) => (
                     <div
                       key={skillIndex}
-                      className="p-2.5 sm:p-3 lg:p-4 rounded-md sm:rounded-lg bg-white/5 border border-white/10 hover:border-accent-primary/50 hover:bg-white/10 hover:shadow-xl hover:shadow-accent-primary/20 hover:-translate-y-1 transition-all duration-300 group cursor-pointer"
+                      className="p-4 rounded-lg bg-white/5 border border-white/10 hover:border-accent-primary/50 hover:bg-white/10 hover:shadow-xl hover:shadow-accent-primary/20 hover:-translate-y-1 transition-all duration-300 group cursor-pointer"
                     >
                       {/* Skill Header with Logo */}
-                      <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
-                        <div className={`w-7 h-7 sm:w-8 sm:h-8 lg:w-10 lg:h-10 rounded-md sm:rounded-lg bg-gradient-to-br ${skill.gradient} flex items-center justify-center shadow-lg group-hover:scale-125 group-hover:rotate-12 transition-all duration-300 shrink-0`}>
-                          <i className={`${skill.iconClass} ${skill.icon} text-white text-xs sm:text-sm lg:text-base group-hover:text-sm sm:group-hover:text-base lg:group-hover:text-lg transition-all duration-300`}></i>
+                      <div className="flex items-center gap-3 mb-3">
+                        <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${skill.gradient} flex items-center justify-center shadow-lg group-hover:scale-125 group-hover:rotate-12 transition-all duration-300 shrink-0`}>
+                          <i className={`${skill.iconClass} ${skill.icon} text-white text-lg group-hover:text-xl transition-all duration-300`}></i>
                         </div>
                         <div className="flex-1 min-w-0">
-                          <h5 className="font-semibold text-[10px] sm:text-xs lg:text-sm text-text-primary truncate group-hover:text-accent-primary transition-colors duration-300">
+                          <h5 className="font-semibold text-sm text-text-primary truncate group-hover:text-accent-primary transition-colors duration-300">
                             {skill.name}
                           </h5>
-                          <span className={`text-[8px] sm:text-[9px] lg:text-xs font-semibold ${getLevelColor(skill.level)} group-hover:scale-110 inline-block transition-transform duration-300`}>
+                          <span className={`text-xs font-semibold ${getLevelColor(skill.level)} group-hover:scale-110 inline-block transition-transform duration-300`}>
                             {skill.level}
                           </span>
                         </div>
-                        <span className={`text-[10px] sm:text-xs lg:text-sm font-bold ${getLevelColor(skill.level)} shrink-0 group-hover:scale-125 transition-transform duration-300`}>
+                        <span className={`text-sm font-bold ${getLevelColor(skill.level)} shrink-0 group-hover:scale-125 transition-transform duration-300`}>
                           {skill.percentage}%
                         </span>
                       </div>
 
                       {/* Progress Bar */}
-                      <div className="h-1.5 sm:h-2 bg-white/10 rounded-full overflow-hidden group-hover:h-2 sm:group-hover:h-3 transition-all duration-300">
+                      <div className="h-2 bg-white/10 rounded-full overflow-hidden group-hover:h-3 transition-all duration-300">
                         <div
                           className={`h-full bg-gradient-to-r ${skill.gradient} rounded-full transition-all duration-1000 ease-out group-hover:shadow-lg group-hover:shadow-accent-primary/50`}
                           style={{ width: `${skill.percentage}%` }}
