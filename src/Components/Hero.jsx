@@ -21,7 +21,7 @@ export default function Hero() {
   return (
     <section
   id="home"
-  className=" flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-[5em] md:pt-20 pb-8 relative overflow-hidden"
+  className="flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-[5em] md:pt-20 pb-32 sm:pb-24 md:pb-8 relative overflow-hidden"
 >
       {/* Animated Background Grid */}
       <div className="absolute inset-0 opacity-20">
@@ -108,14 +108,14 @@ export default function Hero() {
             <div className="fade-in delay-400 flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 mb-6 sm:mb-8">
               <a
                 href="#projects"
-                className="btn-primary inline-flex items-center justify-center text-sm sm:text-base py-2.5 px-5"
+                className="btn-primary inline-flex items-center justify-center text-sm sm:text-base py-2.5 px-5 mr-4"
               >
                 <span>View My Work</span>
                 <i className="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
               </a>
               <a
                 href="#contact"
-                className="btn-outline inline-flex items-center justify-center text-sm sm:text-base py-2.5 px-5"
+                className="btn-outline inline-flex items-center justify-center text-sm sm:text-base py-2.5 px-5 mr-4"
               >
                 <i className="fas fa-envelope mr-2"></i>
                 <span>Get In Touch</span>
@@ -183,7 +183,7 @@ export default function Hero() {
               </div>
 
               {/* Stats Cards - Responsive positioning */}
-              <div className="absolute -bottom-6 sm:-bottom-6 md:left-20 glass-card left-0 rounded-xl px-3 py-2.5 sm:px-4 sm:py-3 md:px-2 md:py-4 hover:scale-105 transition-transform cursor-pointer float-delay-animation">
+              <div className="absolute -bottom-8 sm:-bottom-6 md:left-20 left-4 glass-card rounded-xl px-3 py-2.5 sm:px-4 sm:py-3 md:px-2 md:py-4 hover:scale-105 transition-transform cursor-pointer float-delay-animation">
                 <div className="flex items-center gap-2 sm:gap-3">
                   <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-lg bg-gradient-to-br from-orange-500 via-orange-600 to-red-600 flex items-center justify-center shrink-0 shadow-lg shadow-orange-500/50">
                     <i className="fas fa-graduation-cap text-sm sm:text-base md:text-lg text-white"></i>
@@ -199,7 +199,7 @@ export default function Hero() {
                 </div>
               </div>
 
-              <div className="absolute -bottom-20 md:-bottom-6 right-0 glass-card rounded-xl px-3 py-2.5 sm:px-4 sm:py-3 md:px-5 md:py-4 hover:scale-105 transition-transform cursor-pointer float-animation">
+              <div className="absolute -bottom-24 sm:-bottom-20 md:-bottom-6 right-4 md:right-0 glass-card rounded-xl px-3 py-2.5 sm:px-4 sm:py-3 md:px-5 md:py-4 hover:scale-105 transition-transform cursor-pointer float-animation">
                 <div className="flex items-center gap-2 sm:gap-3">
                   <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-lg bg-gradient-to-br from-purple-500 via-purple-600 to-pink-600 flex items-center justify-center shrink-0 shadow-lg shadow-purple-500/50">
                     <i className="fas fa-briefcase text-sm sm:text-base md:text-lg text-white"></i>

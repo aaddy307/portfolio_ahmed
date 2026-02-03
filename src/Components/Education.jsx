@@ -41,39 +41,39 @@ export default function Education() {
   ];
 
   return (
-    <section id="education" className="py-24 px-6 reveal">
+    <section id="education" className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 reveal">
       <div className="max-w-5xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-5xl font-display font-bold mb-4 gradient-text">Education</h2>
+        <div className="text-center mb-12 sm:mb-14 lg:mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mb-4 gradient-text">Education</h2>
           <div className="section-divider"></div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6">
           {educationData.map((edu, index) => (
-            <div key={index} className="glass-card rounded-2xl p-6 hover-lift flex flex-col">
-              <div className="flex flex-col items-center text-center mb-4">
+            <div key={index} className="glass-card rounded-xl sm:rounded-2xl p-5 sm:p-6 hover-lift flex flex-col">
+              <div className="flex flex-col items-center text-center mb-3 sm:mb-4">
                 <div
-                  className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${edu.gradient} flex items-center justify-center shrink-0 hover:rotate-12 transition-transform duration-500 shadow-lg ${edu.shadowColor} mb-4`}
+                  className={`w-14 h-14 sm:w-16 sm:h-16 rounded-xl sm:rounded-2xl bg-gradient-to-br ${edu.gradient} flex items-center justify-center shrink-0 hover:rotate-12 transition-transform duration-500 shadow-lg ${edu.shadowColor} mb-3 sm:mb-4`}
                 >
-                  <i className={`fas ${edu.icon} text-2xl text-white`}></i>
+                  <i className={`fas ${edu.icon} text-xl sm:text-2xl text-white`}></i>
                 </div>
                 <span
-                  className={`inline-block px-3 py-1 bg-${edu.color}-500/20 text-${edu.color}-500 rounded-full text-xs font-semibold mb-3`}
+                  className={`inline-block px-2.5 sm:px-3 py-1 bg-${edu.color}-500/20 text-${edu.color}-500 rounded-full text-xs font-semibold mb-2 sm:mb-3`}
                 >
                   {edu.type}
                 </span>
               </div>
               
               <div className="text-center flex-1">
-                <h3 className="text-xl font-display font-bold mb-2 leading-tight">{edu.institution}</h3>
-                <p className={`text-base text-${edu.color}-500 mb-3 font-medium`}>{edu.degree}</p>
+                <h3 className="text-lg sm:text-xl font-display font-bold mb-2 leading-tight">{edu.institution}</h3>
+                <p className={`text-sm sm:text-base text-${edu.color}-500 mb-2 sm:mb-3 font-medium`}>{edu.degree}</p>
                 {edu.period && (
-                  <p className="text-text-secondary text-sm mb-2 flex items-center justify-center gap-2">
-                    <i className="far fa-calendar-alt text-xs"></i>
+                  <p className="text-text-secondary text-xs sm:text-sm mb-2 flex items-center justify-center gap-2">
+                    <i className="far fa-calendar-alt text-[10px] sm:text-xs"></i>
                     {edu.period}
                   </p>
                 )}
-                <p className="text-text-secondary text-sm">{edu.status}</p>
+                <p className="text-text-secondary text-xs sm:text-sm">{edu.status}</p>
               </div>
             </div>
           ))}

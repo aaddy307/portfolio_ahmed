@@ -16,14 +16,14 @@ export default function WhatsAppButton() {
       href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50 group"
+      className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 group"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       aria-label="Chat on WhatsApp"
     >
-      {/* Tooltip */}
+      {/* Tooltip - Hidden on mobile */}
       <div
-        className={`absolute right-full mr-3 top-1/2 -translate-y-1/2 whitespace-nowrap px-4 py-2 bg-gray-900 text-white text-sm rounded-lg shadow-lg transition-all duration-300 ${
+        className={`hidden sm:block absolute right-full mr-3 top-1/2 -translate-y-1/2 whitespace-nowrap px-4 py-2 bg-gray-900 text-white text-sm rounded-lg shadow-lg transition-all duration-300 ${
           isHovered ? "opacity-100 translate-x-0" : "opacity-0 translate-x-2 pointer-events-none"
         }`}
       >
@@ -37,10 +37,10 @@ export default function WhatsAppButton() {
         <div className="absolute inset-0 rounded-full bg-green-500 animate-ping opacity-75"></div>
         <div className="absolute inset-0 rounded-full bg-green-500 opacity-25 group-hover:opacity-40 transition-opacity"></div>
         
-        {/* Main button */}
-        <div className="relative w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center shadow-2xl hover:shadow-green-500/50 hover:scale-110 transition-all duration-300 cursor-pointer">
+        {/* Main button - Responsive sizing */}
+        <div className="relative w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center shadow-2xl hover:shadow-green-500/50 hover:scale-110 active:scale-95 transition-all duration-300 cursor-pointer">
           <svg
-            className="w-8 h-8 sm:w-9 sm:h-9 text-white"
+            className="w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 text-white"
             fill="currentColor"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"

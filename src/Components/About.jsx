@@ -140,7 +140,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 reveal"
+      className="py-16 sm:py-0 lg:py-24 px-4 sm:px-6 lg:px-8 reveal"
     >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12 sm:mb-14 lg:mb-16">
