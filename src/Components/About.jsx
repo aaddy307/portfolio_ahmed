@@ -33,11 +33,11 @@ export default function About() {
       icon: "fa-laptop-code",
       gradient: "from-cyan-500 to-blue-600",
       skills: [
-        { name: "React.js", percentage: 90, level: "Expert", icon: "fa-react", iconClass: "fab", gradient: "from-cyan-400 to-blue-500" },
-        { name: "Next.js", percentage: 85, level: "Expert", icon: "fa-n", iconClass: "fas", gradient: "from-blue-400 to-indigo-500" },
-        { name: "Tailwind CSS", percentage: 95, level: "Expert", icon: "fa-css3-alt", iconClass: "fab", gradient: "from-cyan-300 to-teal-500" },
-        { name: "JavaScript", percentage: 88, level: "Expert", icon: "fa-js", iconClass: "fab", gradient: "from-yellow-400 to-orange-500" },
-        { name: "HTML5 & CSS3", percentage: 92, level: "Expert", icon: "fa-html5", iconClass: "fab", gradient: "from-orange-400 to-red-500" },
+        { name: "React.js", percentage: 70, level: "Expert", icon: "fa-react", iconClass: "fab", gradient: "from-cyan-400 to-blue-500" },
+        { name: "Next.js", percentage: 80, level: "Expert", icon: "fa-n", iconClass: "fas", gradient: "from-blue-400 to-indigo-500" },
+        { name: "Tailwind CSS", percentage: 65, level: "Expert", icon: "fa-css3-alt", iconClass: "fab", gradient: "from-cyan-300 to-teal-500" },
+        { name: "JavaScript", percentage: 60, level: "Expert", icon: "fa-js", iconClass: "fab", gradient: "from-yellow-400 to-orange-500" },
+        { name: "HTML5 & CSS3", percentage: 80, level: "Expert", icon: "fa-html5", iconClass: "fab", gradient: "from-orange-400 to-red-500" },
       ]
     },
     {
@@ -45,8 +45,8 @@ export default function About() {
       icon: "fa-server",
       gradient: "from-green-500 to-emerald-600",
       skills: [
-        { name: "Node.js", percentage: 85, level: "Expert", icon: "fa-node-js", iconClass: "fab", gradient: "from-green-400 to-emerald-600" },
-        { name: "Express.js", percentage: 80, level: "Advanced", icon: "fa-code", iconClass: "fas", gradient: "from-emerald-400 to-teal-600" },
+        { name: "Node.js", percentage: 70, level: "Expert", icon: "fa-node-js", iconClass: "fab", gradient: "from-green-400 to-emerald-600" },
+        { name: "Express.js", percentage: 70, level: "Advanced", icon: "fa-code", iconClass: "fas", gradient: "from-emerald-400 to-teal-600" },
         { name: "MongoDB", percentage: 82, level: "Advanced", icon: "fa-database", iconClass: "fas", gradient: "from-green-500 to-lime-600" },
         { name: "MySQL", percentage: 78, level: "Advanced", icon: "fa-database", iconClass: "fas", gradient: "from-blue-500 to-cyan-600" },
       ]
@@ -56,9 +56,9 @@ export default function About() {
       icon: "fa-palette",
       gradient: "from-pink-500 to-rose-600",
       skills: [
-        { name: "Figma", percentage: 88, level: "Expert", icon: "fa-figma", iconClass: "fab", gradient: "from-purple-400 to-pink-500" },
-        { name: "UI/UX Design", percentage: 85, level: "Expert", icon: "fa-pen-nib", iconClass: "fas", gradient: "from-pink-400 to-rose-500" },
-        { name: "WordPress", percentage: 75, level: "Advanced", icon: "fa-wordpress", iconClass: "fab", gradient: "from-blue-600 to-indigo-600" },
+        { name: "Figma", percentage: 90, level: "Expert", icon: "fa-figma", iconClass: "fab", gradient: "from-purple-400 to-pink-500" },
+        { name: "UI/UX Design", percentage: 95, level: "Expert", icon: "fa-pen-nib", iconClass: "fas", gradient: "from-pink-400 to-rose-500" },
+        { name: "WordPress", percentage: 100, level: "Advanced", icon: "fa-wordpress", iconClass: "fab", gradient: "from-blue-600 to-indigo-600" },
       ]
     },
     {
@@ -66,9 +66,9 @@ export default function About() {
       icon: "fa-brain",
       gradient: "from-purple-500 to-indigo-600",
       skills: [
-        { name: "Python", percentage: 80, level: "Advanced", icon: "fa-python", iconClass: "fab", gradient: "from-blue-500 to-yellow-500" },
-        { name: "Deep Learning", percentage: 70, level: "Intermediate", icon: "fa-project-diagram", iconClass: "fas", gradient: "from-purple-500 to-indigo-600" },
-        { name: "Data Science", percentage: 72, level: "Intermediate", icon: "fa-chart-line", iconClass: "fas", gradient: "from-indigo-500 to-purple-600" },
+        { name: "Python", percentage: 45, level: "Advanced", icon: "fa-python", iconClass: "fab", gradient: "from-blue-500 to-yellow-500" },
+        { name: "Deep Learning", percentage: 40, level: "Intermediate", icon: "fa-project-diagram", iconClass: "fas", gradient: "from-purple-500 to-indigo-600" },
+        { name: "Data Science", percentage: 20, level: "Intermediate", icon: "fa-chart-line", iconClass: "fas", gradient: "from-indigo-500 to-purple-600" },
       ]
     },
     {
@@ -76,8 +76,8 @@ export default function About() {
       icon: "fa-tools",
       gradient: "from-orange-500 to-amber-600",
       skills: [
-        { name: "Git & GitHub", percentage: 90, level: "Expert", icon: "fa-github", iconClass: "fab", gradient: "from-gray-700 to-gray-900" },
-        { name: "VS Code", percentage: 95, level: "Expert", icon: "fa-code", iconClass: "fas", gradient: "from-blue-500 to-blue-700" },
+        { name: "Git & GitHub", percentage: 75, level: "Expert", icon: "fa-github", iconClass: "fab", gradient: "from-gray-700 to-gray-900" },
+        { name: "VS Code", percentage: 100, level: "Expert", icon: "fa-code", iconClass: "fas", gradient: "from-blue-500 to-blue-700" },
       ]
     },
   ];
